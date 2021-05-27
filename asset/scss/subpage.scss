@@ -2,11 +2,11 @@
   main .container{
     display: flex;
     #lnb{
-      flex: 200px;
+      flex: 230px;
       flex-shrink: 0;
       flex-grow: 0;
       box-sizing: border-box;
-      padding-right: 20px;
+      padding-right: 50px;
       ul{
         li{
           border-bottom: 1px solid $borderColorPrimary;
@@ -17,20 +17,23 @@
             line-height: 50px;
             font-size: 18px;
             box-sizing: border-box;
-            transition: 0.5s;
+            transition: .5s;
             &:hover{
               padding-left: 20px;
             }
             &.on{
-              color: #fff;
-              background: $gBtnColor;
+              color: white;
+              background: $gbtnColor;
               padding-left: 20px;
             }
           }
         }
       }
+    }//lnb
+    .content{
+      min-height: 500px;
     }
-    .sub_title{
+    .sub_title {
       span{
         position: relative;
         display: inline-block;
@@ -38,8 +41,8 @@
         line-height: 43px;
         &:after{
           content: '';
-          height: 3px;
           position: absolute;
+          height: 3px;
           background: $borderColorPrimary;
           bottom: 0;
           left: 0;
@@ -48,36 +51,26 @@
       }
     }
     .inner{
-      margin-top: 20px;
       & + .inner{
         margin-top: 50px;
         padding-top: 50px;
         border-top: 1px solid $borderColorPrimary;
       }
+
+      &.kakao_map{
+        margin-top: 20px;
+      }
+
       table{
         margin-top: 50px;
         & + .gbtn{
-          float: right;
           margin-top: 20px;
+          float: right;
         }
       }
+
       .box{
         flex-wrap: wrap;
-      }
-      .swiper-container{
-        width: 1000px;
-        height: 500px;
-        .swiper-wrapper{
-          .swiper-slide{
-            img{
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
-      }
-      .swiper-container-thumbs{
-        height: 100px;
       }
     }
   }
